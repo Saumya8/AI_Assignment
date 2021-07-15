@@ -1,0 +1,47 @@
+Q1: Build an Expert System that can recommend conferences and journals by asking the user 
+questions about their preferences regarding their topic of research, keywords, abstract, 
+submission deadlines, conference ranking, journal impact factor and so on. The Expert 
+System is to make its recommendations based on the preferences. If you can provide expert 
+advice for the journals/conferences in which the user has previously published would be an 
+added advantage. 
+Note: The build to has to be implemented in Python. You can consider any of the datasets 
+available in the Internet. Please output the rules as well which led to conclusion.
+Impact Factor: - No. of Citations (current year)/No. Of Articles Published (last 2 years). 
+Optionally, you can create a filter that recommends journals based on the submission 
+deadline and time taken for first decision by the Journal.
+Refer to https://www.scimagojr.com/journalrank.php
+https://drive.google.com/file/d/1Ml5N3wBnksAg_A6gT48p12bt9z9x24EL/view
+
+Q2: BITS Hyderabad campus has started a new initiative to develop safety regulations for 
+monitoring the speed of the vehicles inside the campus. For such scenario, they have put restrictions 
+on speeding of vehiclesto avoid the risk of making accidents and hence, resulting in casualties. You are 
+assigned the job of constructing a Bayesian network to help the vehicle drivers decide whether or not 
+to speed. Some personnel have been assigned the duty to check the over speeding on the roads. Each 
+of the attributes listed below is Boolean. The attribute See-Personnel indicates whether or not the
+driver detects the personnel; Slow-traffic indicates whether or not the vehicle is driven at below the 
+speed limit; Speed indicates whether or not the driver speeds; Fine Chit indicates whether or not the
+driver gets a fine (Rs 500) for over-speeding or not; On-Time indicates whether or not the driver arrives
+on time to pick the concerned person or not etc. You are free to add few more attributes if you feel
+these will improve the outcome of uncertainty reasoning. [15 Marks]
+You are given the following information:
+P(Personnel=T) = 0.8, P(See-Personnel = T|Personnel =T) = 0.7, P(See-Personnel = T|Personnel =F) = 
+0.1
+P(Slow-traffic = T|Personnel =T) = 0.6, P(Slow-traffic = T|Personnel =F) = 0.5, 
+P(Fine Chit = T|Personnel,Speed) = {0.4, if Personnel and Speed are T and 
+ 0.2, otherwise}
+P(On-Time= T|Fine Chit,Speed,Slow Traffic) = { 0.1, if Fine Chit is T;
+ 0.7, if Fine Chit is F and Speed is T; 
+ 0.5, if Fine Chit is F, Speed is F, Slow-Traffic is F; 
+ 0.3, if Ticket is F, Speed is F and Slow-traffic is T}
+Your job is to design or build a Bayesian Network for modelling the above situation. Try finding out 
+the Joint probability distributions for the following using the Bayes Net:
+(a) In case the traffic isslow, willseeing the Personnel affect the probability of the vehicle driver
+getting a Fine Chit?
+(b) Verify the question 2(a) for the vehicle being On-Time. (Assume value of Slow-Traffic is 
+unknown). You need to model the above Bayesian network and simulate it using SamIam 
+tool/ Genie tool. 
+SamIam is a software tool for the creation and consultation of Bayesian networks. The SamIam 
+software package can be downloaded from: http://reasoning.cs.ucla.edu/samiam/
+An alternative package is Genie, a Windows-based system, which, however, also runs on Linux using 
+wine; it contains much more functionality than SamIam. However, as a consequence of this, Genie it 
+is less easy to use than SamIam. Genie can be downloaded from: https://www.bayesfusion.com/
