@@ -1,0 +1,36 @@
+Q.1 In this problem, you will create a messenger bot that can provide intelligent dialog conversations with the user, similar to ELIZA or ALICE discussed in the class.
+ 
+Problem Statement:
+Design a chatterbot that helps Alzheimer’s patients (a disease that causes patients to struggle with short-term memory loss). The frontend should be an Android app developed by you for this purpose. No machine learning is to be used and the whole assignment would be based on keyword matching and intent recognition.
+ 
+Assume the account of the patient is created by a family member. Include a short form during account creation that takes the input to store the necessary information. Store the necessary information like the name, address, phone number, blood-relations and the names of family members, etc. 
+ 
+The messenger bot has to use a knowledgebase with multiple random responses exchanged between the user and the bot. The bot should be able to give replies to numerous interactions and should be able to store the conversations in a database/knowledgebase. The knowledgebase can be stored using MySQL, SQLlite or in any other flat file. These can store persistent copies of the interactions. An example of the conversation should look like this:
+ 
+User: Hi
+Bot: Hello. How can I help you?
+User: I don't remember my name?
+Bot: Your name is Rahul.
+User: Ok. Who are you?
+Bot: I am your memory assistant.
+User: Okay so how do I go home?
+Bot: You stay here: _____(address)_____. Do you want me to guide you home?
+User: Yes
+Bot: (Open Maps)
+
+The BOT should open google maps with the destination as the address entered during the account creation. The BOT should also be able to suggest emergency contacts. Create your own corpus for emergency contacts (emergency contacts may include family member’s contact number, doctor’s contact number, etc). You should use Python with Artificial Intelligence Markup Language (AIML) for creating the core of the chatbot. You can also choose any other language (say, Ruby/ Java) to build the application.
+
+Links for your References:
+https://developers.google.com/maps/documentation/urls/android-intents
+https://developers.google.com/maps/documentation/urls/get-started
+https://www.tutorialspoint.com/aiml/index.htm
+
+Q2: Three blue soldiers, three green soldiers and three red soldiers are standing on the west bank of river Ganges in Varanasi, Uttar Pradesh. A boat is available to shift all the nine soldiers from west bank to east bank of the river. A boat trip from west-to-east should hold two different colour soldiers (blue-green, red-blue, green-red). A boat trip from east-to-west should hold only one soldier of any colour (blue, green, red).  The trips from west-to-east and east-to-west must alternate. For example, a trip with a blue and a green soldier from west-to-east is followed by a trip with blue soldier from east-to-west. Complete the task of shifting the soldiers with as minimal number of trips as possible.
+Write a program to implement a depth first backtracking solution to find a path via safe points (states) from the initial state to the desired state. Choose any programming language and data structure of your choice. If possible, provide a GUI interface to the application with capability to handle any combination of soldiers (generic case). 
+
+Q3:Map shown in Fig.1 is an extract of the various transit routes available for commuting from RGIA, Shamsabad to BITS Hyderabad. Your task is to write a program to find out an optimal route from RGIA airport to BITS Hyderabad other than the ones given in the map. These results are given by Google maps. Your solution could also be same as Google maps on some occasions. To solve the problem of finding an optimal route, you should use OpenStreetMap API [Ref:1, Fig:2 ] to fetch the coordinates of townships (localities) in latitude and longitude from the source to the destination. This data has to be pushed into a database like PostgreSQL [Ref:2] in conjunction with PostGIS [Ref:3] or can be stored in a flat file. An A* search algorithm (Best-first search with h(n) and g(n)) has to be implemented to calculate the transit time (route) to reach a particular destination from any source. For getting the transit time between different locations in the database file (or in the flat file stored in the previous step) you can use the distance metric API from google [Ref:4] which can be used as the heuristic function in the A* algorithm. The result of the A* algorithm has to be projected by the help of REST APIs on the map or shown in the form of coordinates of the nodes, followed by the computed route, as output on the monitor. The build has to be implemented using Python. You are free to use any other tool or language or platform of your choice to implement the task (features) given in this problem. 
+References:
+1. Openstreetmap API (https://www.openstreetmap.org/#map=12/17.3988/78.5907)
+2. https://www.postgresql.org/
+3. https://postgis.net/
+4. https://developers.google.com/maps/documentation/distance-matrix/
