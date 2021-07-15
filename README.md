@@ -3,7 +3,7 @@ CS F407: Artificial Intelligence Assignment (Semester-2 2020-21)
 
 Assignment 1:
 Q1: Chatbot for Alzemier patients
-Q2: Shifting the soliders with minimum number of trips
+Q2: Shifting the soliders with minimum number of trips'
 Q3: Map route from Airport to BITS Hyderabad using A* algo
 
 Assignment 2:
