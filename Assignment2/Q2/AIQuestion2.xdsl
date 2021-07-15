@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network2" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Personnel">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="SeePersonnel">
+			<state id="T" />
+			<state id="F" />
+			<parents>Personnel</parents>
+			<probabilities>0.7 0.3 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="SlowTraffic">
+			<state id="T" />
+			<state id="F" />
+			<parents>Personnel</parents>
+			<probabilities>0.6 0.4 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Speed">
+			<state id="T" />
+			<state id="F" />
+			<parents>SeePersonnel SlowTraffic</parents>
+			<probabilities>0.1 0.9 0.2 0.8 0.4 0.6 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="FineChit">
+			<state id="T" />
+			<state id="F" />
+			<parents>Personnel Speed</parents>
+			<probabilities>0.4 0.6 0.2 0.8 0.2 0.8 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Ontime">
+			<state id="T" />
+			<state id="F" />
+			<parents>FineChit Speed SlowTraffic</parents>
+			<probabilities>0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.7 0.3 0.7 0.3 0.3 0.7 0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="JPD">
+			<state id="State1" />
+			<state id="State2" />
+			<parents>SeePersonnel FineChit SlowTraffic</parents>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</probabilities>
+		</cpt>
+		<cpt id="JPD2">
+			<state id="State1" />
+			<state id="State2" />
+			<parents>SeePersonnel FineChit Ontime</parents>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.6128.0 ACADEMIC" name="Network2">
+			<node id="Personnel">
+				<name>Personnel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>243 45 312 90</position>
+			</node>
+			<node id="SeePersonnel">
+				<name>See Personnel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>225 196 329 257</position>
+			</node>
+			<node id="SlowTraffic">
+				<name>Slow Traffic</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>426 294 528 355</position>
+			</node>
+			<node id="FineChit">
+				<name>Fine Chit</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>19 287 149 361</position>
+			</node>
+			<node id="Speed">
+				<name>Speed</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>231 299 323 349</position>
+			</node>
+			<node id="Ontime">
+				<name>On Time</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>229 509 326 559</position>
+			</node>
+			<node id="JPD">
+				<name>Joint Distribution</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>455 29 547 100</position>
+			</node>
+			<node id="JPD2">
+				<name>Joint Distribution b</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>581 478 673 549</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
